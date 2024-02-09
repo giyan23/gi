@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(FourthPage/menu.png);
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            background-position: center;
+            position: relative;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu-box {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+            background-color: rgba(26, 71, 137, 0.7);
+            border-radius: 25px;
+            padding: 20px;
+        }
+
+        .menu-title {
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 25px;
+        }
+
+        .menu-item {
+            font-weight: bold;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 10px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 25px;
+            color: black; /* Change text color to black */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .home-button {
+            position: absolute;
+            top: 10.5px;
+            right: 0px;
+            cursor: pointer;
+	  }
+        .profile-button {
+            position: absolute;
+            top: 75px;
+            right: 0px; /* Adjust the right position as needed */
+            cursor: pointer;
+        }
+
+        .home-button img,
+        .profile-button img {
+            width: 75px;
+            height: 60px;
+        }
+
+        .left-click-image  {
+            position: fixed;
+            bottom: 7px;
+            cursor: pointer;
+		}	
+        .right-click-image {
+            position: fixed;
+            bottom: 10px;
+            cursor: pointer;
+        }
+
+        .left-click-image {
+            left: 15px;
+        }
+
+        .right-click-image {
+            right: 15px;
+        }
+
+        .click-image {
+            width: 70px;
+            height: 70px;
+        }
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            text-align: center;
+            position: relative; /* Added position relative */
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: black; /* Change text color to black */
+            font-size: 20px;
+        }
+
+        #registrar-popup:target,
+        #clinic-popup:target,
+        #ab140-room-popup:target,
+        #deans-office-popup:target,
+        #osa-popup:target,
+        #faculty-popup:target {
+            display: flex;
+        }
+        #ab140-room-popup .popup-content {
+            height: 80%;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="Seventhpage.html" class="home-button">
+        <img src="C:\Users\Alarcio\Downloads\WEBPAGE\FourthPage\homelogo3.png" alt="Home">
+    </a>
+    <a href="Thirdpage.html" class="profile-button">
+        <img src="C:\Users\Alarcio\Downloads\WEBPAGE\FourthPage\profilebutton.png" alt="Profile">
+    </a>
+
+    <div class="menu-box">
+        <div class="menu-title">Where to Go?</div>
+        <a href="#registrar-popup" class="menu-item" data-info="Information about Registrar">1 - REGISTRAR</a>
+        <a href="#clinic-popup" class="menu-item" data-info="Information about Clinic">2 - CLINIC</a>
+        <a href="#ab140-room-popup" class="menu-item" data-info="Information about AB1-40 Room">3 - AB1-40 ROOM</a>
+        <a href="#deans-office-popup" class="menu-item" data-info="Information about Dean's Office">4 - DEANS OFFICE</a>
+        <a href="#osa-popup" class="menu-item" data-info="Information about OSA">5 - OSA</a>
+        <a href="#faculty-popup" class="menu-item" data-info="Information about Faculty">6 - FACULTY</a>
+    </div>    
+
+    <!-- Pop-up container for Registrar -->
+    <div id="registrar-popup" class="popup-container">
+        <div class="popup-content">
+            <a href="#" class="close-button" onclick="history.back();">X</a>
+            <h2>REGISTRAR</h2>
+            <p>Date Available:</p>
+            <p>Monday – Friday</p>
+            <p>Time Available:</p>
+            <p>7:00am – 12:00pm</p>
+            <p>1:00pm – 4:00pm</p>
+        </div>
+    </div>
+    <div id="clinic-popup" class="popup-container">
+        <div class="popup-content">
+            <a href="#" class="close-button" onclick="history.back();">X</a>
+            <h2>CLINIC</h2>
+            <p>Date Available:</p>
+            <p>Monday – Saturday</p>
+            <p>Time Available:</p>
+            <p>7:00am – 12:00pm</p>
+            <p>1:00pm – 4:00pm</p>
+        </div>
+    </div>
+
+    <!-- Pop-up container for AB1-40 ROOM -->
+    <div id="ab140-room-popup" class="popup-container">
+        <div class="popup-content">
+            <a href="#" class="close-button" onclick="history.back();">X</a>
+            <h2>Room AB – 2</h2>
+            <p>Date & Time Available:</p>
+            <p>Monday - 9:00am – 11:00am</p>
+            <p>Wednesday - 9:30am – 11:30am</p>
+            <p>Friday - 2:00pm – 2:30pm</p>
+            <h2>Room AB – 3</h2>
+            <p>Date & Time Available:</p>
+            <p>Monday – 12:00pm – 1:30pm</p>
+            <p>Saturday – 3:45pm – 5:00pm</p>
+            <h2>Room Ab – 4</h2>
+            <p>Date & Time Available:</p>
+            <p>Tuesday – 1:00pm – 1:30pm</p>
+            <p>Thursday – 10:00am – 10:30am</p>
+            <h2>Room AB – 5</h2>
+            <p>Date & Time Available:</p>
+            <p>Monday - 9:00am – 11:00am</p>
+            <p>Saturday - 1:30am – 11:30am</p>
+            <p>Friday - 4:00pm – 5:30pm</p>
+            <h2>Room AB – 6</h2>
+            <p>Date & Time Available:</p>
+            <p>Tuesday – 3:00pm – 3:30pm</p>
+            <p>Wednesday – 6:45pm – 7:00pm</p>
+            <h2>Room Ab – 7</h2>
+            <p>Date & Time Available:</p>
+            <p>Thursday – 7:00am – 8:30am</p>
+            <p>Thursday – 10:00am – 10:30am</p>
+            <h2>Room AB – 8</h2>
+            <p>Date & Time Available:</p>
+            <p>Thursday - 8:00am – 9:00am</p>
+            <p>Wednesday - 1:30pm – 2:30pm</p>
+            <p>Saturday - 4:00pm – 6:30pm</p>
+            <h2>Room AB – 9</h2>
+            <p>Date & Time Available:</p>
+            <p>Monday – 9:30am– 10:30am</p>
+            <p>Thursday – 1:45pm – 2:00pm</p>
+            <p>Friday – 6:00pm – 7:00pm</p>
+            <h2>Room Ab – 10</h2>
+            <p>Date & Time Available:</p>
+            <p>Tuesday – 4:00pm – 5:00pm</p>
+            <p>Thursday – 7:00pm – 7:30pm</p>
+        </div>
+    </div>
+
+    <!-- Pop-up container for Dean's Office -->
+    <div id="deans-office-popup" class="popup-container">
+        <div class="popup-content">
+            <a href="#" class="close-button" onclick="history.back();">X</a>
+            <h2>DEANS OFFICE</h2>
+            <p>Date Available:</p>
+            <p>Monday – Saturday</p>
+            <p>Time Available:</p>
+            <p>7:00am – 12:00pm</p>
+            <p>1:00pm – 4:00pm</p>
+        </div>
+    </div>
+
+    <!-- Pop-up container for OSA -->
+    <div id="osa-popup" class="popup-container">
+        <div class="popup-content">
+            <a href="#" class="close-button" onclick="history.back();">X</a>
+            <h2>OSA</h2>
+            <p>Date Available:</p>
+            <p>Monday – Saturday</p>
+            <p>Time Available:</p>
+            <p>7:00am – 12:00pm</p>
+            <p>1:00pm – 4:00pm</p>
+        </div>
+    </div>
+
+    <!-- Pop-up container for Faculty -->
+    <div id="faculty-popup" class="popup-container">
+        <div class="popup-content">
+            <a href="#" class="close-button" onclick="history.back();">X</a>
+            <h2>FACULTY</h2>
+            <p>Date Available:</p>
+            <p>Monday – Saturday</p>
+            <p>Time Available:</p>
+            <p>7:00am – 12:00pm</p>
+            <p>1:00pm – 4:00pm</p>
+        </div>
+    </div>
+
+    <a href="Fifthpage.html" class="left-click-image">
+        <img src="C:\Users\Alarcio\Downloads\WEBPAGE\FourthPage\leftarrow.png" alt="Left Click" class="click-image">
+    </a>
+
+    <a href="Sixthpage.html" class="right-click-image">
+        <img src="C:\Users\Alarcio\Downloads\WEBPAGE\FourthPage\rightarrow.png" alt="Right Click" class="click-image">
+    </a>
+</body>
+
+</html>

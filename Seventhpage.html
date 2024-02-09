@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seventh Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url(SeventhPage/helpd.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-size 0.3s ease;
+        }
+
+        #person-button,
+        #back-button,
+        #house-button {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 5vw;
+            /* Set the width to match the question mark */
+            height: auto;
+            /* Maintain the aspect ratio */
+        }
+
+        #person-button img {
+            width: 94%;
+            /* Make the image fill the container */
+            height: auto;
+        }
+        #house-button img {
+            width: 108%;
+            /* Make the image fill the container */
+            height: auto;
+        }
+
+        #back-button img {
+            width: 8vw;
+            height: auto;
+        }
+
+        #person-button {
+            top: 35%;
+            left: 3.0%;
+        }
+
+        #back-button {
+            top: 83%;
+            left: 1.5%;
+        }
+
+        #house-button {
+            top: 13%;
+            left: 3%;
+        }
+
+        #question-mark {
+            position: absolute;
+            top: 60%;
+            left: 3%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        #question-mark img {
+            width: 5vw;
+            height: auto;
+        }
+
+        #popup {
+            background-image: url(ThirdPage/aboutccc.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            height: 70vh;
+            width: 67vw;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            display: none;
+            box-shadow: 0 0 10px rgba(251, 133, 133, 0.2);
+            z-index: 2;
+            border: 5px solid #503e3e;
+        }
+
+        #popup-content {
+            /* Style the content of your popups here */
+        }
+
+        #popup:target {
+            display: block;
+        }
+
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 3vw;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="Thirdpage.html" id="person-button">
+            <img src="C:\Users\Alarcio\Downloads\WEBPAGE\SeventhPage\computer-icons-person-clip-art-name-9e032115302ec111f078caca2c0cb520.png">
+        </a>
+    </div>
+
+    <div>
+        <a href="Fourthpage.html" id="back-button">
+            <img src="C:\Users\Alarcio\Downloads\WEBPAGE\SeventhPage\return-button-png-34573.png">
+        </a>
+    </div>
+
+    <div>
+        <a href="Firstpage.html" id="house-button">
+            <img src="C:\Users\Alarcio\Downloads\WEBPAGE\SeventhPage\exit.png">
+        </a>
+    </div>
+
+    <div>
+        <a href="#popup" id="question-mark">
+            <img src="C:\Users\Alarcio\Downloads\WEBPAGE\SeventhPage\—Pngtree—question mark vector icon_4236972.png">
+        </a>
+    </div>
+
+    <div id="popup">
+        <a href="#" id="close-btn">&times;</a>
+        <div id="popup-content">
+            <!-- Content of your main popup here -->
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifth Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('FifthPage/FifthPage.png');
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        #home-button {
+            position: fixed;
+            bottom: 2%;
+            right: 1.5%;
+            width: 5%;
+            height: auto;
+            max-width: 100px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        #home-button:hover {
+            opacity: 0.7;
+        }
+
+        #home-button img {
+            width: 130%;
+            height: auto;
+        }
+
+        #room-button {
+            position: fixed;
+            top: 40%;
+            right: 0.5%;
+            transform: translateY(0%);
+            background-color: transparent;
+            color: #fff;
+            padding: 3%; 
+            border: 1px solid transparent;
+            cursor: pointer;
+            font-size: 1.3vw; 
+            text-decoration: none;
+        }
+
+        #clinic-button {
+            position: fixed;
+            top: 79%;
+            left: 44.5%;
+            transform: translate(-50%, -50%);
+            background-color: #1a4789;
+            color: #fff;
+            padding: 7px 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.4vw; 
+            text-decoration: none;
+        }
+        #clinic-button:hover {
+            background-color: #154276; 
+        }
+
+        #cashier-button {
+            position: fixed;
+            top: 87%;
+            left: 64%;
+            transform: translate(-50%, -50%);
+            background-color: #1a4789;
+            color: #fff;
+            padding: 7px 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.4vw;
+            text-decoration: none;
+        }
+
+        #cashier-button:hover {
+            background-color: #154276;
+        }
+
+        #room-popup-container:target,
+        #clinic-popup-container:target,
+        #cashier-popup-container:target {
+            display: block;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        #room-popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 2%;
+            max-width: 80%;
+		  width: 19%;
+            border: 2px solid #000;
+            z-index: 1;
+		  height: 80%;
+		  overflow-y: auto;
+        }
+
+        #clinic-popup-container,
+        #cashier-popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 2%;
+            max-width: 80%;
+		  width: 12%;
+            border: 2px solid #000;
+            z-index: 1;
+        }
+
+        #close-room-popup,
+        #close-clinic-popup,
+        #close-cashier-popup {
+            position: absolute;
+            top: 1%;
+            right: 1%;
+            font-size: 1.5vw;
+            cursor: pointer;
+        }
+
+        #room-popup-content,
+        #clinic-popup-content,
+        #cashier-popup-content {
+            max-width: 100%;
+            font-size: 1.3vw;
+            padding: 2%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a id="home-button" href="Fourthpage.html">
+        <img src="C:\Users\Alarcio\Downloads\WEBPAGE\FifthPage\homelogo.png" alt="Home Button">
+    </a>
+
+    <a id="room-button" href="#room-popup-container">ROOM AB 1 - 40</a>
+
+    <!-- Popup Container -->
+    <div id="room-popup-container">
+        <span id="close-room-popup"><a href="#">X</a></span>
+        <div id="room-popup-content">
+            <h3>Room AB – 2</h3>
+            <p>Date & Time Available:</p>
+            <p>Monday - 9:00am – 11:00am</p>
+            <p>Wednesday - 9:30am – 11:30am</p>
+            <p>Friday - 2:00pm – 2:30pm</p>
+            <h3>Room AB – 3</h3>
+            <p>Date & Time Available:</p>
+            <p>Monday – 12:00pm – 1:30pm</p>
+            <p>Saturday – 3:45pm – 5:00pm</p>
+            <h3>Room Ab – 4</h3>
+            <p>Date & Time Available:</p>
+            <p>Tuesday – 1:00pm – 1:30pm</p>
+            <p>Thursday – 10:00am – 10:30am</p>
+            <h3>Room AB – 5</h3>
+            <p>Date & Time Available:</p>
+            <p>Monday - 9:00am – 11:00am</p>
+            <p>Saturday - 1:30am – 11:30am</p>
+            <p>Friday - 4:00pm – 5:30pm</p>
+            <h3>Room AB – 6</h3>
+            <p>Date & Time Available:</p>
+            <p>Tuesday – 3:00pm – 3:30pm</p>
+            <p>Wednesday – 6:45pm – 7:00pm</p>
+            <h3>Room Ab – 7</h3>
+            <p>Date & Time Available:</p>
+            <p>Thursday – 7:00am – 8:30am</p>
+            <p>Thursday – 10:00am – 10:30am</p>
+            <h3>Room AB – 8</h3>
+            <p>Date & Time Available:</p>
+            <p>Thursday - 8:00am – 9:00am</p>
+            <p>Wednesday - 1:30pm – 2:30pm</p>
+            <p>Saturday - 4:00pm – 6:30pm</p>
+            <h3>Room AB – 9</h3>
+            <p>Date & Time Available:</p>
+            <p>Monday – 9:30am– 10:30am</p>
+            <p>Thursday – 1:45pm – 2:00pm</p>
+            <p>Friday – 6:00pm – 7:00pm</p>
+            <h3>Room Ab – 10</h3>
+            <p>Date & Time Available:</p>
+            <p>Tuesday – 4:00pm – 5:00pm</p>
+            <p>Thursday – 7:00pm – 7:30pm</p>
+        </div>
+    </div>
+
+    <!-- Clinic Button -->
+    <a id="clinic-button" href="#clinic-popup-container">CLINIC</a>
+
+    <!-- Clinic Popup Container -->
+    <div id="clinic-popup-container">
+        <span id="close-clinic-popup"><a href="#">X</a></span>
+        <div id="clinic-popup-content">
+            <h2>CLINIC</h2>
+            <p>Date Available:</p>
+            <p>Monday - Saturday</p>
+            <p>Time Available:</p>
+            <p>7:00am - 12:00Pm</p>
+            <p>1:00pm - 4:00pm</p>
+        </div>
+    </div>
+
+    <!-- Cashier Button -->
+    <a id="cashier-button" href="#cashier-popup-container">CASHIER</a>
+
+    <!-- Cashier Popup Container -->
+    <div id="cashier-popup-container">
+        <span id="close-cashier-popup"><a href="#">X</a></span>
+        <div id="cashier-popup-content">
+            <h2>CASHIER</h2>
+            <p>Date Available:</p>
+            <p>Monday - Saturday</p>
+            <p>Time Available:</p>
+            <p>7:00am - 12:00Pm</p>
+            <p>1:00pm - 4:00pm</p>
+        </div>
+    </div>
+</body>
+</html>

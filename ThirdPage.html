@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url(ThirdPage/web2bg.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-size 0.3s ease;
+        }
+
+        dl {
+            font-size: 1.5vw;
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+            display: block;
+            margin: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        #click-here {
+            position: absolute;
+            top: 53%;
+            left: 51.5%;
+            transform: translate(-50%, -50%);
+        }
+
+        #click-here a {
+            display: inline-block;
+		  font-weight: bold;
+            font-size: 2vw;
+		  font: bold;
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #click-here a:hover {
+            background-color: #1c5275;
+        }
+
+        #tutorial-manual {
+            position: absolute;
+            top: 66%;
+            left: 87%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        #tutorial-manual img {
+            width: 7.5vw;
+            height: auto;
+        }
+
+        #question-mark {
+            position: absolute;
+            top: 16.5%;
+            left: 93.5%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        #question-mark img {
+            width: 3.5vw;
+            height: auto;
+        }
+
+        #popup {
+            background-image: url(ThirdPage/webabout.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            height: 70vh;
+            width: 67vw;
+            transform: translate(-50%, -50%);
+            background-color: #baf9ec;
+            padding: 20px;
+            display: none;
+            box-shadow: 0 0 10px rgba(251, 133, 133, 0.2);
+            z-index: 2;
+            border: 5px solid #503e3e;
+        }
+
+        #popup:target {
+            display: block;
+        }
+
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 3vw;
+            cursor: pointer;
+        }
+
+        #popup-content {
+            display: block;
+            text-align: center;
+            color: #040404;
+            font-size: 2vw;
+        }
+
+        #tutorial-popup {
+            background-image: url(ThirdPage/aboutccc.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            height: 70vh;
+            width: 67vw;
+            transform: translate(-50%, -50%);
+            background-color: #baf9ec;
+            padding: 20px;
+            display: none;
+            box-shadow: 0 0 10px rgba(251, 133, 133, 0.2);
+            z-index: 2;
+            border: 5px solid #503e3e;
+        }
+
+        #tutorial-popup:target {
+            display: block;
+        }
+
+        #tutorial-close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 3vw;
+            cursor: pointer;
+        }
+
+        #tutorial-popup-content {
+            display: block;
+            text-align: center;
+            color: #8b4513;
+            font-size: 2vw;
+        }
+    </style>
+</head>
+<body> 
+    <div id="click-here">
+        <a href="Fourthpage.html">ENTER HERE</a>
+    </div>
+
+    <div id="tutorial-manual">
+        <a href="#tutorial-popup">
+            <img src="C:\Users\Alarcio\Downloads\WEBPAGE\ThirdPage\use.png" alt="tutorial manual">
+        </a>
+    </div>
+
+    <div>
+        <a href="#popup" id="question-mark">
+            <img src="C:\Users\Alarcio\Downloads\WEBPAGE\ThirdPage\blue-icon-13453.png" alt="Question Mark">
+        </a>
+    </div>
+
+    <div id="popup">
+        <a href="#" id="close-btn">&times;</a>
+        <div id="popup-content">
+            <!-- Content of your popup here -->
+        </div>
+    </div>
+
+    <div id="tutorial-popup">
+        <a href="#" id="tutorial-close-btn">&times;</a>
+        <div id="tutorial-popup-content">
+            <!-- Content of your tutorial popup here -->
+        </div>
+    </div>
+
+</body>
+</html>
